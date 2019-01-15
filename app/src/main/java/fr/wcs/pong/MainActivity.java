@@ -13,7 +13,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         ImageView ball = findViewById(R.id.ball);
-        ObjectAnimator animation = ObjectAnimator.ofInt(ball, "translationY", 1000);
+        ObjectAnimator animation = ObjectAnimator.ofFloat(ball, "translationY", 100f);
         animation.setDuration(2000);
         animation.start();
     }
