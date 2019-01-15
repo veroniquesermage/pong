@@ -34,18 +34,21 @@ public class MainActivity extends AppCompatActivity {
 
 
         animationStart.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
+            boolean isReadyToReverse;
             @Override
             public void onAnimationUpdate(ValueAnimator animation) {
                 Float test = barTop.getY();
-                if (ball.getY()<barTop.getY()){
-                    animationStart.end();
 
+                if (ball.getY()<barTop.getY()){
+                    animation.cancel();
                 }
+
                 System.out.println("bidule est content --------------------------------------------------- " + test);
                 System.out.println("bidule est content ùùùùùùùùùùùùùùùùùùùùùùùùùùùùùùùùùùùùùùùùùùùùùùùùùùùùù " + ball.getY());
 
             }
         });
+
 
 
         // bar animation on touch
